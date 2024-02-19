@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-[#243757] h-screen w-screen mx-0 px-0">
+  <div class="bg-[#F1F9FE] h-screen w-screen mx-0 px-0">
     <NavBar
-      title="Title"
+      title="Joel Christensen"
     />
     <NuxtPage />
   </div>
