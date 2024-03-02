@@ -5,11 +5,12 @@
       <section class="absolute top-[100px] -right-1/3 h-[70vh] w-[90vw] lg:h-screen bg-[radial-gradient(ellipse_at_center,_#7CB79D_0%,#f1f9fe_72%)] backdrop-blur-sm mix-blend-darken"></section>
       <section class="absolute bottom-0 h-[33vh] w-screen bg-[radial-gradient(ellipse_at_bottom_left,_#36B7F0_0%,#f1f9fe_70%)] backdrop-blur-sm mix-blend-darken"></section>
     </div>
-    <div class="absolute z-10 w-full h-full">
+    <div class="absolute z-10 w-full h-screen">
       <NavBar
         title=""
       />
-      <NuxtPage />
+      <NuxtPage class="h-full"/>
+      <img src="~/assets/img/hero_blocks3.png" class="w-full max-w-screen-xl mx-auto" alt="Hero Blocks" />
     </div>
   </div>
 </template>
