@@ -1,24 +1,46 @@
 <template>
     <!-- Container -->
-    <div class="w-full h-2/3 flex flex-col justify-start lg:justify-start items-center mt-12">
-        <Glass>
-            <div class="flex flex-col gap-8 mx-16 my-24">
-                <div class="flex flex-col h-full gap-4 mt-12">
-                <h2 class="font-extralight text-4xl md:text-6xl">Joel Christensen</h2>
-                <h1 class="font-bold text-2xl md:text-5xl 2xl:text-6xl">Full Stack Software Engineer</h1>
-                </div>
-                <p class="text-2xl w-3/5 font-extralight">I’m a software engineer who loves to create for the web (and sometimes mobile). I’m currently helping small businesses get their start at <span class="font-bold">Maiden Voyage Software.</span></p>
-                <div class="flex flex-col gap-2">
-                    <BlockButton w="xl" color="tailwind">Resume</BlockButton>
-                    <BlockButton w="xl" color="vue">Contact Me</BlockButton>
-                    <BlockButton w="xl" color="laravel">Projects</BlockButton>
-                </div>
+    <div class="w-full h-2/3 flex flex-col justify-start lg:justify-start items-center mt-4 xl:mt-12 gap-8 xl:gap-36">
+        <Hero />
+        <Section 
+            title="Projects" 
+            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto"
+        >
+            <div class="flex flex-col md:flex-row md:gap-8">
+                <ProjectCard 
+                    title="Grimoire: Fantasy Worldbuilding Tool"
+                    link="https://grimoire-five.vercel.app"
+                    imgPath="hero_blocks.svg"
+                    :pills="[
+                        { text: 'Nuxt 3', color: 'vue' },
+                        { text: 'PostgreSQL', color: 'laravel' },
+                        { text: 'Supabase', color: 'laravel' },
+                        { text: 'Tailwind CSS', color: 'tailwind' }
+                    ]"
+                />
+                <ProjectCard 
+                    title="Spotify Web API App"
+                    link="https://spotify-five-kohl.vercel.app/"
+                    imgPath="hero_blocks.svg"
+                    :pills="[
+                        { text: 'Vue 3', color: 'vue' },
+                        { text: 'REST API', color: 'laravel' },
+                        { text: 'PKCE Auth', color: 'laravel' },
+                        { text: 'TailwindCSS', color: 'tailwind' }
+                    ]"
+                />
+                <ProjectCard 
+                    title="NBA Shot Data Visualizer"
+                    link="https://github.com/christensenjo/NBA-Shot-Data-Visualizer"
+                    imgPath="hero_blocks.svg"
+                    :pills="[
+                        { text: 'D3.js', color: 'vue' },
+                        { text: 'Django', color: 'laravel' },
+                        { text: 'Bootstrap', color: 'tailwind' }
+                    ]"
+                />
             </div>
-        </Glass>
-        <img src="~/assets/img/green_block.png" class="w-72 h-72 absolute top-36 start-2/3 rotate-[7deg]" alt="Green Block" />
-        <!-- Hero -->
-        <!-- <div class="w-full h-screen flex flex-col justify-center items-around max-w-screen-xl mx-8 xl:mx-auto">
-            
-        </div> -->
+        </Section>
+        <!-- <img src="~/assets/img/green_block.png" class="w-72 h-72 absolute top-36 start-2/3 rotate-[7deg]" alt="Green Block" /> -->
     </div>
 </template>

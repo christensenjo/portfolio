@@ -1,3 +1,12 @@
+<script setup>
+  useHead({
+  title: 'Joel Christensen',
+  meta: [
+    { name: 'description', content: 'Portfolio for Joel Christensen, Full-Stack Software Engineer.' }
+  ],
+})
+</script>
+
 <template>
   <div class="bg-[#F1F9FE] mx-0 px-0 overflow-y-auto">
     <div class="fixed z-0 bg-[#f1f9fe] w-full h-full overflow-hidden">
@@ -10,7 +19,7 @@
         title=""
       />
       <NuxtPage class="h-full"/>
-      <img src="~/assets/img/hero_blocks3.png" class="w-full max-w-screen-xl mx-auto" alt="Hero Blocks" />
+      <img src="~/assets/img/footer_blocks.png" class="w-full max-w-screen-xl mx-auto" alt="Footer Blocks" />
     </div>
   </div>
 </template>

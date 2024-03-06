@@ -4,12 +4,19 @@
 
 <template>
     <div class="relative mx-auto w-full max-w-screen-xl z-10 rounded-md">
-        <div class="bg-primary opacity-50 w-full h-full absolute rounded-md"></div>
-        <div class="relative z-50">
+        <!-- Behind -->
+        <div class="absolute w-full h-full top-0 left-0 z-0">
+            <slot name="behind"></slot>
+        </div>
+        <!-- Glass background -->
+        <div class="bg-primary opacity-50 w-full h-full absolute rounded-md z-10"></div>
+        <!-- Default -->
+        <div class="relative z-20">
             <slot></slot>
         </div>
     </div>
 </template>
+
 
 
 <style scoped>
