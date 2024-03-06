@@ -10,7 +10,7 @@
                 <ProjectCard 
                     title="Grimoire: Fantasy Worldbuilding Tool"
                     link="https://grimoire-five.vercel.app"
-                    imgPath="hero_blocks.svg"
+                    img="grimoire"
                     :pills="[
                         { text: 'Nuxt 3', color: 'vue' },
                         { text: 'PostgreSQL', color: 'laravel' },
@@ -21,7 +21,7 @@
                 <ProjectCard 
                     title="Spotify Web API App"
                     link="https://spotify-five-kohl.vercel.app/"
-                    imgPath="hero_blocks.svg"
+                    img="spotify"
                     :pills="[
                         { text: 'Vue 3', color: 'vue' },
                         { text: 'REST API', color: 'laravel' },
@@ -32,7 +32,7 @@
                 <ProjectCard 
                     title="NBA Shot Data Visualizer"
                     link="https://github.com/christensenjo/NBA-Shot-Data-Visualizer"
-                    imgPath="hero_blocks.svg"
+                    img="nba"
                     :pills="[
                         { text: 'D3.js', color: 'vue' },
                         { text: 'Django', color: 'laravel' },

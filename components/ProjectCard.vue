@@ -8,9 +8,9 @@ const props = defineProps({
         type: String,
         default: ""
     },
-    imgPath: {
+    img: {
         type: String,
-        default: "hero_blocks.svg"
+        default: "blocks"
     },
     pills: {
         type: Array,
@@ -27,9 +27,12 @@ const props = defineProps({
     <Glass class="w-full md:max-w-screen-sm mt-4 md:my-8">
         <div class="flex flex-col p-4 items-between">
             <div class="flex flex-row justify-between w-full mb-6">
-                <img :src="require('@/assets/img/' + imgPath)" class="w-20 h-20" :alt="title + ' logo'" />
+                <img v-if="img === 'grimoire'" src="~/assets/img/grimoire_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
+                <img v-else-if="img === 'spotify'" src="~/assets/img/spotify_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
+                <img v-else-if="img === 'nba'" src="~/assets/img/nba_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
+                <img v-else src="~/assets/img/hero_blocks.svg" class="w-20 h-20" :alt="title + ' logo'" />
                 <NuxtLink :to="link">
-                    <img src="~/assets/img/hero_blocks.svg" class="w-12 h-12" :alt="'Visit' + title " />
+                    <img src="~/assets/img/link.svg" class="w-12 h-12" :alt="'Visit' + title " />
                 </NuxtLink>
             </div>
             <div class="flex flex-col mb-16">
