@@ -11,8 +11,8 @@
         <!-- Glass background -->
         <div class="bg-primary opacity-50 w-full h-full absolute rounded-md z-10"></div>
         <!-- Default -->
-        <div class="relative z-20">
-            <slot></slot>
+        <div class="relative z-20 h-full">
+            <slot class="h-full"></slot>
         </div>
     </div>
 </template>

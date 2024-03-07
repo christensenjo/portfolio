@@ -17,6 +17,7 @@
                         { text: 'Supabase', color: 'laravel' },
                         { text: 'Tailwind CSS', color: 'tailwind' }
                     ]"
+                    :inDevelopment="true"
                 />
                 <ProjectCard 
                     title="Spotify Web API App"
