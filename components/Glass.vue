@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="relative mx-auto w-full max-w-screen-xl z-10 rounded-md">
+    <div class="relative mx-auto xl:w-full max-w-screen-xl z-10 rounded-md">
         <!-- Behind -->
         <div class="absolute w-full h-full top-0 left-0 z-0">
             <slot name="behind"></slot>

@@ -19,7 +19,7 @@
         title=""
       />
       <NuxtPage class="h-full"/>
-      <img src="~/assets/img/footer_blocks.png" class="w-full max-w-screen-xl mx-auto" alt="Footer Blocks" />
+      <!-- <img src="~/assets/img/footer_blocks.png" class="w-full max-w-screen-xl mx-auto" alt="Footer Blocks" /> -->
     </div>
   </div>
 </template>
