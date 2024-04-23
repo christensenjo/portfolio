@@ -122,40 +122,66 @@ const jobDetails = computed(() => {
             id="experience"
             class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto pb-96"
         >
-            <div class="h-full mt-6 flex flex-col md:flex-row gap-2 md:gap-0">
-                <div class="flex flex-row md:flex-1">
+            <div class="h-full mt-6 flex flex-col md:flex-row gap-2 md:gap-0 w-full">
+                <div class="flex flex-row w-full md:flex-1">
                     <div class="h-80 w-1 rounded-full bg-black hidden md:flex mr-4">
                         <!-- Vertical slider -->
                     </div>
-                    <div class="flex flex-row md:flex-col justify-start gap-8">
+                    <div class="flex flex-row md:flex-col justify-start gap-8 mr-4">
                         <BlockButton 
                             link="https://yourmaidenvoyage.com/"
-                            class="w-fit md:w-40 xl:w-80 px-2 py-auto md:py-2 text-black font-medium transition-colors text-sm md:text-2xl "
+                            class="w-fit md:w-40 xl:w-80 px-2 py-auto md:py-2 text-black font-medium transition-colors text-sm md:text-2xl hidden md:flex"
                             :class="currentJob === 0 ? 'bg-tailwind' : 'bg-transparent'"
+                            align="left"
                             @mouseover="currentJob = 0"
                         >
                             Maiden Voyage Software
                         </BlockButton>
                         <BlockButton
                             link="https://www.healthcatalyst.com/"
-                            class="w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl"
+                            class="w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl hidden md:flex"
                             :class="currentJob === 1 ? 'bg-vue' : 'bg-transparent'"
+                            align="left"
                             @mouseover="currentJob = 1"
                         >
                             Health Catalyst
                         </BlockButton>
                         <BlockButton
                             link="https://www.familysearch.org/en/united-states/"
-                            class="w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl"
+                            class="w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl hidden md:flex"
                             :class="currentJob === 2 ? 'bg-laravel' : 'bg-transparent'"
+                            align="left"
                             @mouseover="currentJob = 2"
                         >
                             FamilySearch
                         </BlockButton>
+                        <div class="flex flex-row overflow-x-scroll md:hidden w-[calc(92vw)] text-2xl mx-auto">
+                            <BlockButton
+                                v-if="currentJob === 0"
+                                link="https://yourmaidenvoyage.com/"
+                                class="w-full px-2 py-auto text-black font-medium bg-tailwind h-20"
+                            >
+                                Maiden Voyage Software
+                            </BlockButton>
+                            <BlockButton 
+                                v-else-if="currentJob === 1"
+                                link="https://yourmaidenvoyage.com/"
+                                class="w-11/12 px-2 py-auto text-black font-medium bg-tailwind"
+                            >
+                                Health Catalyst
+                            </BlockButton>
+                            <BlockButton 
+                                v-else
+                                link="https://yourmaidenvoyage.com/"
+                                class="w-11/12 px-2 py-auto text-black font-medium bg-tailwind"
+                            >
+                                FamilySearch
+                            </BlockButton>
+                        </div>
                     </div>
                 </div>
-                <Glass class="h-full w-fit mx-auto xl:w-8/12">
-                    <div class="w-full flex flex-col gap-4 py-6 xl:py-12 px-4 xl:px-20">
+                <Glass class="h-full w-fit mx-auto md:w-2/3 lg:w-3/4 xl:w-full">
+                    <div class="w-full flex flex-col gap-4 py-6 xl:py-12 px-4 lg:px-16 xl:px-20">
                         <h1 class="text-3xl xl:text-5xl font-extralight">{{ jobTitle }}</h1>
                         <h2 class="font-bold text-md xl:text-xl">{{ jobPeriod }}</h2>
                         <ul class="list-disc text-xl ml-6 font-extralight w-11/12">
@@ -164,7 +190,7 @@ const jobDetails = computed(() => {
                     </div>
                 </Glass>
             </div>
-            <Glass>
+            <Glass class="w-full">
                 <div class="flex flex-row justify-between">
                     <div class="flex flex-col gap-1 my-4 mx-8">
                         <h1 class="font-extralight text-3xl md:text-6xl">Utah State University</h1>
