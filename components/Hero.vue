@@ -8,9 +8,9 @@
                 </div>
                 <p class="text-lg text-left lg:text-2xl w-full lg:w-3/5 font-extralight">I’m a software engineer who loves to create for the web (and sometimes mobile). I’m currently helping small businesses get their start at <span class="font-bold">Maiden Voyage Software.</span></p>
                 <div class="flex flex-col gap-2 w-full justify-center md:justify-start">
-                    <BlockButton class="bg-tailwind w-40 xl:w-52 px-3 py-2">GitHub</BlockButton>
-                    <BlockButton class="bg-vue w-40 xl:w-52 px-3 py-2">Resume</BlockButton>
-                    <BlockButton class="bg-laravel w-40 xl:w-52 px-3 py-2">Contact Me</BlockButton>
+                    <BlockButton class="bg-tailwind w-40 xl:w-52 px-3 py-2 text-white">GitHub</BlockButton>
+                    <BlockButton class="bg-vue w-40 xl:w-52 px-3 py-2 text-white">Resume</BlockButton>
+                    <BlockButton class="bg-laravel w-40 xl:w-52 px-3 py-2 text-white">Contact Me</BlockButton>
                 </div>
             </div>
         </template>
