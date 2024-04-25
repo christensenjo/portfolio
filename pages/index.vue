@@ -123,7 +123,7 @@ const arrowDecreaseJob = () => {
         >
             <Glass>
                 <div class="flex flex-col-reverse md:flex-row justify-between md:justify-around items-center">
-                    <img src="~/assets/img/capital_cutout.png" class="w-fit mx-auto md:w-fit h-96" />
+                    <img src="~/assets/img/capital_cutout.png" class="w-fit mx-8 sm:mx-auto md:w-fit h-96" />
                     
                     <div class="m-6 text-center text-xl md:text-2xl font-light h-fit flex justify-center items-center md:w-2/5 md:mx-auto">
                         <p class="h-full my-auto">
