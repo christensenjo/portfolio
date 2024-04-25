@@ -136,7 +136,7 @@ const arrowDecreaseJob = () => {
         <Section
             title="Experience"
             id="experience"
-            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto pb-96"
+            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto"
         >
             <div class="h-full mt-6 flex flex-col md:flex-row gap-2 md:gap-0 w-full">
                 <div class="flex flex-row w-full md:flex-1">
@@ -172,7 +172,7 @@ const arrowDecreaseJob = () => {
                             FamilySearch
                         </BlockButton>
                         <div class="flex flex-row overflow-x-scroll md:hidden w-[calc(96vw)] text-2xl mx-auto justify-center">
-                            <img src="~/assets/img/left_arrow.svg" class="w-10" @click="arrowDecreaseJob" />
+                            <img src="~/assets/img/left_arrow.svg" class="w-10" @click="arrowDecreaseJob" alt="See previous work experience" />
                             <BlockButton
                                 v-if="currentJob === 0"
                                 link="https://yourmaidenvoyage.com/"
@@ -194,7 +194,7 @@ const arrowDecreaseJob = () => {
                             >
                                 FamilySearch
                             </BlockButton>
-                            <img src="~/assets/img/right_arrow.svg" class="w-10" @click="arrowIncreaseJob" />
+                            <img src="~/assets/img/right_arrow.svg" class="w-10" @click="arrowIncreaseJob" alt="See next work experience" />
                         </div>
                     </div>
                 </div>
@@ -209,17 +209,35 @@ const arrowDecreaseJob = () => {
                 </Glass>
             </div>
             <Glass class="w-full">
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-col md:flex-row justify-between">
                     <div class="flex flex-col gap-1 my-4 mx-8">
                         <h1 class="font-extralight text-3xl md:text-6xl">Utah State University</h1>
                         <h2 class="font-medium text-2xl md:text-5xl">Bachelor of Science</h2>
                         <p class="font-bold text-md xl:text-xl">Jan 2019 - Dec 2022</p>
                     </div>
-                    <div class="w-fit mx-auto my-auto font-extralight text-xl md:text-2xl">
+                    <div class="w-fit ml-8 md:mx-auto my-auto font-extralight text-xl md:text-2xl mb-8 md:my-auto">
                         <ul class="w-fit list-disc">
                             <li>Computer Science Major, Economics Minor</li>
                             <li>Data Science Club Secretary</li>
                         </ul>
+                    </div>
+                </div>
+            </Glass>
+        </Section>
+        <Section
+            title="Contact Me"
+            id="contact"
+            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto  pb-96"
+        >
+            <Glass class="w-full">
+                <div class="flex flex-col w-full p-4 pl-8">
+                    <div class="flex flex-row justify-left items-center gap-3 md:gap-7">
+                        <img src="~/assets/img/email.svg" alt="Email icon" class="w-16"/>
+                        <p class="font-extralight text-xl md:text-4xl">christensenjo14@gmail.com</p>
+                    </div>
+                    <div class="flex flex-row justify-left items-center md:gap-4">
+                        <img src="~/assets/img/phone.svg" alt="Phone icon" class="w-16 ml-3"/>
+                        <p class="font-extralight text-2xl md:text-4xl">(208)-749-7563</p>
                     </div>
                 </div>
             </Glass>
