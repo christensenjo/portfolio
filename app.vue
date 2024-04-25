@@ -1,6 +1,6 @@
 <script setup>
   useHead({
-  title: 'Joel Christensen',
+  title: 'Joel Christensen - Full-Stack Software Engineer Portfolio',
   meta: [
     { name: 'description', content: 'Portfolio for Joel Christensen, Full-Stack Software Engineer.' }
   ],
