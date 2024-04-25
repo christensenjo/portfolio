@@ -227,13 +227,13 @@ const arrowDecreaseJob = () => {
         <Section
             title="Contact Me"
             id="contact"
-            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto  pb-96"
+            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto pb-52 md:pb-96"
         >
             <Glass class="w-full">
                 <div class="flex flex-col w-full p-4 pl-8">
-                    <div class="flex flex-row justify-left items-center gap-3 md:gap-7">
+                    <div class="flex flex-row justify-left items-center md:gap-7">
                         <img src="~/assets/img/email.svg" alt="Email icon" class="w-16"/>
-                        <p class="font-extralight text-xl md:text-4xl">christensenjo14@gmail.com</p>
+                        <p class="font-extralight text-xl md:text-4xl ml-3 md:ml-0">christensenjo14@gmail.com</p>
                     </div>
                     <div class="flex flex-row justify-left items-center md:gap-4">
                         <img src="~/assets/img/phone.svg" alt="Phone icon" class="w-16 ml-3"/>
