@@ -53,6 +53,22 @@ const jobDetails = computed(() => {
             return [];
     }
 });
+
+const arrowIncreaseJob = () => {
+    if(currentJob.value === 2) {
+        currentJob.value = 0;
+    } else {
+        currentJob.value++;
+    }
+};
+
+const arrowDecreaseJob = () => {
+    if(currentJob.value === 0) {
+        currentJob.value = 2;
+    } else {
+        currentJob.value--;
+    }
+};
 </script>
 
 <template>
@@ -155,28 +171,30 @@ const jobDetails = computed(() => {
                         >
                             FamilySearch
                         </BlockButton>
-                        <div class="flex flex-row overflow-x-scroll md:hidden w-[calc(92vw)] text-2xl mx-auto">
+                        <div class="flex flex-row overflow-x-scroll md:hidden w-[calc(96vw)] text-2xl mx-auto justify-center">
+                            <img src="~/assets/img/left_arrow.svg" class="w-10" @click="arrowDecreaseJob" />
                             <BlockButton
                                 v-if="currentJob === 0"
                                 link="https://yourmaidenvoyage.com/"
-                                class="w-full px-2 py-auto text-black font-medium bg-tailwind h-20"
+                                class="w-fit px-2 py-auto text-black font-medium bg-tailwind"
                             >
                                 Maiden Voyage Software
                             </BlockButton>
                             <BlockButton 
                                 v-else-if="currentJob === 1"
                                 link="https://yourmaidenvoyage.com/"
-                                class="w-11/12 px-2 py-auto text-black font-medium bg-tailwind"
+                                class="w-fit px-2 py-auto text-black font-medium bg-vue"
                             >
                                 Health Catalyst
                             </BlockButton>
                             <BlockButton 
                                 v-else
                                 link="https://yourmaidenvoyage.com/"
-                                class="w-11/12 px-2 py-auto text-black font-medium bg-tailwind"
+                                class="w-fit px-2 py-auto text-black font-medium bg-laravel"
                             >
                                 FamilySearch
                             </BlockButton>
+                            <img src="~/assets/img/right_arrow.svg" class="w-10" @click="arrowIncreaseJob" />
                         </div>
                     </div>
                 </div>
