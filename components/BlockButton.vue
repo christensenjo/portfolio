@@ -18,7 +18,7 @@ const conditionalClass = computed(() => {
 
 <template>
     <NuxtLink 
-        :to="link"
+        :to="props.link"
         class="opacity-95 backdrop-blur-sm text-black text-2xl py-2 rounded-md font-medium tracking-wide my-auto md:my-0"
         :class="conditionalClass"
     >
