@@ -14,12 +14,15 @@
                     >
                         GitHub
                     </BlockButton>
-                    <BlockButton 
+                    <a href="/resume.pdf" class="bg-vue w-40 xl:w-52 px-3 py-2 text-white opacity-95 backdrop-blur-sm text-center text-2xl rounded-md font-medium tracking-wide my-auto md:my-0" download="">
+                        Resume
+                    </a>
+                    <!-- <BlockButton 
                         class="bg-vue w-40 xl:w-52 px-3 py-2 text-white"
-                        link="/files/resume.pdf"
+                        link="/resume.pdf"
                     >
                         Resume
-                    </BlockButton>
+                    </BlockButton> -->
                     <BlockButton 
                         class="bg-laravel w-40 xl:w-52 px-3 py-2 text-white"
                         link="#contact"
