@@ -54,6 +54,19 @@ const jobDetails = computed(() => {
     }
 });
 
+const jobLetter = computed(() => {
+    switch (currentJob.value) {
+        case 0:
+            return "/Joel_MV_Letter_of_Recommendation.pdf";
+        case 1:
+            return "/Joel_HC_Letter_of_Recommendation.pdf";
+        case 2:
+            return "/Joel_FS_Letter_of_Recommendation.pdf";
+        default:
+            return "";
+    }
+});
+
 const arrowIncreaseJob = () => {
     if(currentJob.value === 2) {
         currentJob.value = 0;
@@ -205,6 +218,14 @@ const arrowDecreaseJob = () => {
                         <ul class="list-disc text-xl ml-6 font-extralight w-11/12">
                             <li v-for="item in jobDetails" v-html="item"></li>
                         </ul>
+                        <a 
+                            class="text-center mx-auto italic py-1 px-3 border-solid border-2 rounded-lg cursor-pointer"
+                            :class="jobTitle === 'Full Stack Software Engineer' ? 'border-tailwind hover:bg-tailwind' : jobTitle === 'Cloud/Software Intern' ? 'border-vue hover:bg-vue' : 'border-laravel hover:bg-laravel'"
+                            :href="jobLetter" 
+                            download=""
+                        >
+                            Letter of Recommendation
+                        </a>
                     </div>
                 </Glass>
             </div>
