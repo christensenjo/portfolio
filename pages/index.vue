@@ -108,7 +108,7 @@ const arrowDecreaseJob = () => {
                 />
                 <ProjectCard 
                     title="Spotify Web API App"
-                    link="https://spotify-five-kohl.vercel.app/"
+                    link="https://github.com/christensenjo/spotify"
                     img="spotify"
                     :pills="[
                         { text: 'Vue 3', color: 'vue' },
