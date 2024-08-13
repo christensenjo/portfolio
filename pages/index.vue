@@ -17,7 +17,7 @@ const jobTitle = computed(() => {
 const jobPeriod = computed(() => {
     switch (currentJob.value) {
         case 0:
-            return "Feb 2023 - Present";
+            return "Feb 2023 - May 2024";
         case 1:
             return "Summer 2022";
         case 2:
