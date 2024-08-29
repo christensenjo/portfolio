@@ -129,20 +129,26 @@ const changeJob = (direction) => {
       <div class="h-full mt-6 flex flex-col md:flex-row gap-2 md:gap-0 w-full">
         <div class="flex flex-row w-full md:flex-1">
           <!-- Desktop view -->
-          <div class="hidden md:flex flex-col gap-8 mr-4">
-            <BlockButton
-              v-for="job in jobs"
-              :key="job.id"
-              :link="job.link"
-              :class="[
-                'w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl',
-                currentJob === job.id ? job.class : 'bg-transparent'
-              ]"
-              align="left"
-              @mouseover="currentJob = job.id"
-            >
-              {{ job.company }}
-            </BlockButton>
+          <div class="hidden md:flex flex-row gap-4 mr-4">
+            <!-- Vertical line -->
+            <div class="h-80 w-1 rounded-full bg-black hidden md:block"></div>
+            
+            <!-- Job titles -->
+            <div class="flex flex-col gap-8">
+              <BlockButton
+                v-for="job in jobs"
+                :key="job.id"
+                :link="job.link"
+                :class="[
+                  'w-fit md:w-40 xl:w-80 px-2 py-2 text-black font-medium transition-colors text-sm md:text-2xl',
+                  currentJob === job.id ? job.class : 'bg-transparent'
+                ]"
+                align="left"
+                @mouseover="currentJob = job.id"
+              >
+                {{ job.company }}
+              </BlockButton>
+            </div>
           </div>
           
           <!-- Mobile view -->
