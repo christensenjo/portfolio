@@ -229,7 +229,13 @@ const arrowDecreaseJob = () => {
                     </div>
                 </Glass>
             </div>
-            <Glass class="w-full">
+        </Section>
+        <Section
+            title="Education"
+            id="education"
+            class="px-4 xl:px-12 w-full max-w-screen-xl mx-auto"
+        >
+            <Glass class="w-full mt-6">
                 <div class="flex flex-col md:flex-row justify-between">
                     <div class="flex flex-col gap-1 my-4 mx-8">
                         <h1 class="font-extralight text-3xl md:text-6xl">Utah State University</h1>
