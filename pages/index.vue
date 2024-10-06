@@ -6,11 +6,26 @@ const currentJob = ref(0);
 const jobs = [
   {
     id: 0,
+    company: "Voyyance LLC",
+    title: "CTO",
+    period: "September 2024 - Present",
+    link: "https://www.linkedin.com/company/voyyance/posts/?feedView=all",
+    class: "bg-laravel",
+    letter: "",
+    letterClass: "",
+    details: [
+      "Ensure development of scalable, secure, and innovative software solutions that align with company goals.",
+      "Manage company technology infrastructure.",
+      "Oversee engineering team.",
+    ]
+  },
+  {
+    id: 1,
     company: "Maiden Voyage",
     title: "Full Stack Software Engineer",
     period: "Feb 2023 - May 2024",
     link: "https://yourmaidenvoyage.com/",
-    class: "bg-tailwind",
+    class: "bg-vue",
     letter: "/Joel_MV_Letter_of_Recommendation.pdf",
     letterClass: "border-tailwind hover:bg-tailwind",
     details: [
@@ -22,12 +37,12 @@ const jobs = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     company: "HealthCatalyst",
     title: "Cloud/Software Intern",
     period: "Summer 2022",
     link: "https://www.healthcatalyst.com/",
-    class: "bg-vue",
+    class: "bg-tailwind",
     letter: "/Joel_HC_Letter_of_Recommendation.pdf",
     letterClass: "border-vue hover:bg-vue",
     details: [
@@ -38,12 +53,12 @@ const jobs = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     company: "FamilySearch",
     title: "Backend Software Intern",
     period: "Summer 2021",
     link: "https://www.familysearch.org/en/united-states/",
-    class: "bg-laravel",
+    class: "bg-vue",
     letter: "/Joel_FS_Letter_of_Recommendation.pdf",
     letterClass: "border-laravel hover:bg-laravel",
     details: [
@@ -70,25 +85,15 @@ const changeJob = (direction) => {
     >
       <div class="flex flex-col md:flex-row md:gap-8">
         <ProjectCard 
-          title="Grimoire: Fantasy Worldbuilding Tool"
-          link="https://grimoire-five.vercel.app"
-          img="grimoire"
+          title="NBA Data Project for LA Clippers"
+          description="Project completed as part of the LA Clippers Basketball Full Stack developer position technical challenge."
+          link="https://github.com/christensenjo/la-clippers-data-visualization"
+          img="nba"
           :pills="[
-            { text: 'Nuxt 3', color: 'vue' },
+            { text: 'Vue', color: 'vue' },
+            { text: 'Django', color: 'laravel' },
+            { text: 'Docker', color: 'laravel' },
             { text: 'PostgreSQL', color: 'laravel' },
-            { text: 'Supabase', color: 'laravel' },
-            { text: 'Tailwind CSS', color: 'tailwind' }
-          ]"
-          :inDevelopment="true"
-        />
-        <ProjectCard 
-          title="Spotify Web API App"
-          link="https://github.com/christensenjo/spotify"
-          img="spotify"
-          :pills="[
-            { text: 'Vue 3', color: 'vue' },
-            { text: 'REST API', color: 'laravel' },
-            { text: 'PKCE Auth', color: 'laravel' },
             { text: 'TailwindCSS', color: 'tailwind' }
           ]"
         />
@@ -100,6 +105,54 @@ const changeJob = (direction) => {
             { text: 'D3.js', color: 'vue' },
             { text: 'Django', color: 'laravel' },
             { text: 'Bootstrap', color: 'tailwind' }
+          ]"
+        />
+        <ProjectCard 
+          title="Grimoire: Fantasy Worldbuilding Tool"
+          link="https://grimoire-five.vercel.app"
+          img="grimoire"
+          :pills="[
+            { text: 'Nuxt 3', color: 'vue' },
+            { text: 'PostgreSQL', color: 'laravel' },
+            { text: 'Supabase', color: 'laravel' },
+            { text: 'Tailwind CSS', color: 'tailwind' }
+          ]"
+          description="*In development*"
+        />
+      </div>
+      <div class="flex flex-col md:flex-row md:gap-4">
+        <ProjectCard
+          title="Spotify Web API App"
+          link="https://github.com/christensenjo/spotify"
+          img="spotify"
+          :pills="[
+            { text: 'Vue 3', color: 'vue' },
+            { text: 'REST API', color: 'laravel' },
+            { text: 'PKCE Auth', color: 'laravel' },
+            { text: 'TailwindCSS', color: 'tailwind' }
+          ]"
+        />
+        <ProjectCard
+          title="Let's Go Eat! Mock API in Golang"
+          link="https://github.com/christensenjo/go-dinner-reservations"
+          img="golang"
+          :pills="[
+            { text: 'Go', color: 'laravel' },
+            { text: 'PostgreSQL', color: 'laravel' },
+          ]"
+        />
+        
+        <ProjectCard
+          title="Next.js Image Gallery"
+          link="https://github.com/christensenjo/t3gallery"
+          img="next"
+          :pills="[
+            { text: 'Next.js', color: 'vue' },
+            { text: 'Vercel Postgres', color: 'laravel' },
+            { text: 'UploadThing', color: 'laravel' },
+            { text: 'Clerk Auth', color: 'laravel' },
+            { text: 'shadcn/ui', color: 'tailwind' },
+            { text: 'TailwindCSS', color: 'tailwind' },
           ]"
         />
       </div>
@@ -195,12 +248,12 @@ const changeJob = (direction) => {
       <Glass class="w-full">
         <div class="flex flex-col w-full p-4 pl-8">
           <div class="flex flex-row justify-left items-center md:gap-7">
-            <img src="~/assets/img/email.svg" alt="Email icon" class="w-16"/>
-            <p class="font-extralight text-xl md:text-4xl ml-3 md:ml-0">christensenjo14@gmail.com</p>
+            <img src="~/assets/img/email.svg" alt="Email icon" class="w-12 md:w-16"/>
+            <p class="font-extralight text-lg md:text-4xl ml-3 md:ml-0 break-words">christensenjo14@gmail.com</p>
           </div>
           <div class="flex flex-row justify-left items-center md:gap-4">
-            <img src="~/assets/img/phone.svg" alt="Phone icon" class="w-16 ml-3"/>
-            <p class="font-extralight text-2xl md:text-4xl">(208)-749-7563</p>
+            <img src="~/assets/img/phone.svg" alt="Phone icon" class="w-12 md:w-16 ml-3"/>
+            <p class="font-extralight text-lg md:text-4xl">(208)-749-7563</p>
           </div>
         </div>
       </Glass>

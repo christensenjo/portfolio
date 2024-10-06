@@ -16,9 +16,9 @@ const props = defineProps({
         type: Array,
         default: () => []
     },
-    inDevelopment: {
-        type: Boolean,
-        default: false
+    description: {
+        type: String,
+        default: ""
     }
 });
 </script>
@@ -32,16 +32,18 @@ const props = defineProps({
                         <img v-if="img === 'grimoire'" src="~/assets/img/grimoire_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
                         <img v-else-if="img === 'spotify'" src="~/assets/img/spotify_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
                         <img v-else-if="img === 'nba'" src="~/assets/img/nba_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
+                        <img v-else-if="img === 'golang'" src="~/assets/img/golang_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
+                        <img v-else-if="img === 'next'" src="~/assets/img/next_js_logo.svg" class="w-20 h-20" :alt="title + ' logo'" />
                         <img v-else src="~/assets/img/hero_blocks.svg" class="w-20 h-20" :alt="title + ' logo'" />
-                        <div class="hidden sm:flex flex-col mb-16 md:hidden items-start">
+                        <div :class="['hidden sm:flex flex-col md:hidden items-start', pills.length > 5 ? 'mb-8' : 'mb-16']">
                             <h1 class="text-2xl font-bold">{{ title }}</h1>
-                            <p v-if="inDevelopment" class="text-lg text-left font-extralight">*In development*</p>
+                            <p v-if="description" class="text-md text-left font-extralight">{{ description }}</p>
                         </div>
                         <img src="~/assets/img/link.svg" class="w-12 h-12" :alt="'Visit' + title " />
                     </div>
-                    <div class="flex flex-col mb-16 sm:hidden md:flex">
+                    <div :class="['flex flex-col sm:hidden md:flex', (description || pills.length > 5) ? 'mb-8' : 'mb-16']">
                         <h1 class="text-2xl font-bold">{{ title }}</h1>
-                        <p v-if="inDevelopment" class="text-lg font-extralight">*In development*</p>
+                        <p v-if="description" class="text-md text-left font-extralight pt-1">{{ description }}</p>
                     </div>
                 </div>
                 <div v-if="pills.length > 0" class="flex flex-row flex-wrap gap-2 items-end">

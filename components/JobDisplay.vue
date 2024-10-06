@@ -16,6 +16,7 @@ const props = defineProps({
         <li v-for="(item, index) in job.details" :key="index" v-html="item"></li>
       </ul>
       <a 
+        v-if="job.letter"
         class="text-center mx-auto italic py-1 px-3 border-solid border-2 rounded-lg cursor-pointer"
         :class="job.letterClass"
         :href="job.letter" 
