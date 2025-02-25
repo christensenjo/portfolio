@@ -12,7 +12,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Instrument Sans', ...defaultTheme.fontFamily.sans],
+                sans: ['dutch-mediaeval-pro', ...defaultTheme.fontFamily.sans],
+                title: ['ltc-goudy-text-pro', ...defaultTheme.fontFamily.sans],
+                titleShaded: ['ltc-goudy-text-pro-shaded', ...defaultTheme.fontFamily.sans],
             },
             borderRadius: {
                 lg: 'var(--radius)',
