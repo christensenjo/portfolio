@@ -1,0 +1,10 @@
+.ContentWrapper {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.ResumeContent {
+    margin-top: 10vh;
+}

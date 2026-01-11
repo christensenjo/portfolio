@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './routes/Home/App.js';
 import About from './routes/About/About.js'
+import Resume from './routes/Resume/Resume.js';
 
 // Importing the Bootstrap CSS & React Router
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/resume",
-    element: <h1>Resume</h1>,
+    element: <Resume />,
   },
 ]);
 

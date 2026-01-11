@@ -75,8 +75,15 @@
     font-weight: 400;
     font-size: 7vh;
     line-height: 100px;
+    text-align: center;
 }
 
 .CapitalShot {
-    height: 76vh;
+    height: 60vh;
+}
+
+.PictureColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

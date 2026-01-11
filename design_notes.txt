@@ -1,0 +1,22 @@
+Website Design Notes
+
+Color Palette: 
+#042563
+#FCFCFF
+#d5a941
+#3F3D56
+
+logo: 245px width by 45px height
+	245 by 45, [5.44 * 1]
+
+
+Intro animation ideas
+
+1. glitch animation
+2. hover bounce on image
+
+
+joelbcdesign@gmail.com
+Contactjoelbc-design!
+
+https://us-central1-joelbc-design.cloudfunctions.net/sendMail?from=user@gmail.com&sub=testEmail1&msg=testEmailSucceeded

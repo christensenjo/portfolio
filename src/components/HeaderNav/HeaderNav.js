@@ -29,9 +29,9 @@ function HeaderNav(props) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="flex-grow pe-3">
-                  <Nav.Link href="/about">about me</Nav.Link>
                   <Nav.Link href="/portfolio">portfolio</Nav.Link>
                   <Nav.Link href="/resume">resume</Nav.Link>
+                  <Nav.Link href="/about">about me</Nav.Link>
                   <Nav.Link href="https://github.com/christensenjo"><img src={github} alt="Github logo" className="NavImg" /></Nav.Link>
                   <Nav.Link href="https://www.linkedin.com/in/joel-christensen-usu/"><img src={linkedin} alt="LinkedIn logo" className="NavImg" /></Nav.Link>
                   <Nav.Link href="https://twitter.com/dataSaysJoel"><img src={twitter} alt="Twitter logo" className="NavImg" /></Nav.Link>

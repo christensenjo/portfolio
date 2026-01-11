@@ -21,7 +21,7 @@ function Hero(props){
                     </p>
                 </Stack>
             </Col>
-            <Col md="6">
+            <Col md="6" className="PictureColumn">
                 <img className="BioContent CapitalShot" src={capitalShot} alt="Joel Christensen Headshot" />
             </Col>
         </Row>
