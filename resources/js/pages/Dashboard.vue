@@ -21,7 +21,7 @@ defineProps<{
 
     <AppLayout :breadcrumbs="breadcrumbs">
         <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4 relative z-10 mix-blend-normal">
-            <div class="grid auto-rows-min gap-4 md:grid-cols-3">
+            <!-- <div class="grid auto-rows-min gap-4 md:grid-cols-3">
                 <div class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
                     <PlaceholderPattern />
                 </div>
@@ -34,8 +34,10 @@ defineProps<{
             </div>
             <div class="relative min-h-[100vh] flex-1 rounded-xl border border-sidebar-border/70 dark:border-sidebar-border md:min-h-min">
                 <PlaceholderPattern />
-            </div>
+            </div> -->
         </div>
-        <OmbreSynthesis7 class="relative z-0 h-full w-full rounded-xl p-4" :colorA="'#243757'" :colorB="'#000000'" :colorC="'#243757'" :colorD="'#000000'" :background-color="'#000000'" :frequency="1.75" :speed="0.75" :amplitude="0.1" :smoothness="0.5" />
+        <OmbreSynthesis7 class="relative z-0 h-full w-full rounded-xl p-4 mix-blend-plus-lighter" :colorA="'#13181B'" :colorB="'#13181B'" :colorC="'#13181B'" :colorD="'#13181B'" :background-color="'#13181B'" :frequency="0.01" :speed="0.01" :amplitude="0.01" :smoothness="0.5" />
+        
+        <!-- <OmbreChromatic6 class="relative z-0 h-full w-full rounded-xl p-4" :colorA="'#13181B'" :colorB="'#13181B'" :colorC="'#13181B'" :colorD="'#13181B'" :background-color="'#13181B'" :frequency="0.01" :speed="0.01" :amplitude="0.01" :smoothness="0.5" /> -->
     </AppLayout>
 </template>

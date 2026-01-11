@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\WorkOS\Http\Middleware\ValidateSessionWithWorkOS;
 
-Route::get('/', fn () => Inertia::render('Welcome'));
+Route::get('/', fn () => Inertia::render('Home'));
+
+Route::get('/rive', fn () => Inertia::render('RiveBgGlass'));
 
 Route::middleware([
     'auth',
