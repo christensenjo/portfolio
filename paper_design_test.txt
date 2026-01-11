@@ -1,0 +1,25 @@
+TODO: test Paper
+
+/**
+ * Code exported from Paper
+ * https://app.paper.design/file/01K4RQCK0ZEQDDH5W9GRC4MQ23?node=01K4QGM09ET564CV7HTR0WAM2H
+ * on Sep 10, 2025 at 11:32 AM.
+ */
+export default function GeneratedComponent() {
+  return <div style={{ backgroundColor: '#F8F8F8', boxSizing: 'border-box', height: '639px', transformOrigin: '0% 0%', width: '511px' }} />;
+}
+
+
+
+/** @paper-design/shaders-react@0.0.51 */
+import { MeshGradient } from '@paper-design/shaders-react';
+
+/**
+ * Code exported from Paper
+ * https://app.paper.design/file/01K4RQCK0ZEQDDH5W9GRC4MQ23?node=01K4QGM09FCDEFKS74PFQ95RJE
+ * on Sep 10, 2025 at 11:35 AM.
+ */
+export default function GeneratedComponent() {
+  return <MeshGradient speed={0} colors={['#e0eaff', '#241d9a', '#f75092', '#9f50d3']} distortion={0.8} swirl={0.1} frame={7175.8010000620225} style={{ height: '320px', width: '513px' }} />;
+}
+O
