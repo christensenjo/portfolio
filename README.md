@@ -1,4 +1,4 @@
-# Portfolio v2.0
+# Portfolio - Joel Christensen
 
 A personal portfolio website showcasing my work as a full stack software engineer. This is the second major iteration of my portfolio, redesigned and rebuilt with modern web technologies.
 
@@ -14,12 +14,12 @@ This portfolio introduces visitors to my background, experience, and work. It fe
 
 ## Tech Stack
 
-- **Backend**: Laravel 12
-- **Frontend**: React 19
-- **Framework**: Inertia.js v2
-- **Styling**: Tailwind CSS v4
-- **Animation**: Motion
-- **Graphics**: Shaders
+- **Minimal Backend**: [Laravel 12](https://laravel.com/docs/12.x)
+- **Frontend**: [React 19](https://react.dev/)
+- **SSR**: [Inertia.js v2](https://inertiajs.com/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/docs/installation/using-vite)
+- **Animation**: [Motion](https://motion.dev/docs/react)
+- **WebGPU Graphics**: [Shaders](https://shaders.com/)
 
 ## Version History
 
