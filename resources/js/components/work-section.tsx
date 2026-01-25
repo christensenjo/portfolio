@@ -52,13 +52,18 @@ export const WorkSection = ({
                         <span className="font-title font-bold">{showcaseProject.company}</span>
                     </p>
 
-                    {/* Placeholder for project screenshot */}
-                    <div className="w-[calc(100%-2rem)] rounded-lg bg-muted shadow-lg" style={{ height: `${cellSize * 1.4}px` }}>
-                        <div className="flex h-full items-center justify-center text-muted-foreground">
-                            {/* Placeholder for project image */}
-                            <span className="text-sm">Project Screenshot</span>
-                        </div>
-                    </div>
+                    <a
+                        href="https://primestats.net"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-[calc(100%-2rem)] rounded-lg bg-muted shadow-lg h-fit cursor-pointer group"
+                    >
+                        <img
+                            src="/images/primestats.png"
+                            alt="project screenshot"
+                            className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+                        />
+                    </a>
                 </div>
             </div>
 

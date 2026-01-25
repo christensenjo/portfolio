@@ -22,17 +22,19 @@ export const HeroVisual = ({ cellSize = 123, className }: HeroVisualProps) => {
             className={cn('relative grid grid-cols-3 grid-rows-2', className)}
             style={{ gridAutoRows: `${cellSize}px` }}
         >
-            {/* Shader background layer - covers the L-shape */}
+            {/* Shader background layer - covers the L-shape, inset by border width */}
             <div
                 className="pointer-events-none absolute inset-0"
                 style={{
                     clipPath: `polygon(
-                        0 0,
-                        ${cellSize}px 0,
+                        2px 2px,
+                        ${cellSize - 3}px 2px,
+                        ${cellSize - 3}px ${cellSize}px,
                         ${cellSize}px ${cellSize}px,
-                        ${cellSize * 3}px ${cellSize}px,
-                        ${cellSize * 3}px ${cellSize * 2}px,
-                        0 ${cellSize * 2}px
+                        ${cellSize}px ${cellSize + 2}px,
+                        ${cellSize * 3 - 2}px ${cellSize + 2}px,
+                        ${cellSize * 3 - 2}px ${cellSize * 2 - 2}px,
+                        2px ${cellSize * 2 - 2}px
                     )`,
                 }}
             >
