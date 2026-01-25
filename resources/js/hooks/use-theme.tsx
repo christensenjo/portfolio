@@ -27,7 +27,13 @@ export const useTheme = () => {
 
     useEffect(() => {
         const root = document.documentElement;
-        const initialIsDark = root.classList.contains('dark');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialIsDark = root.classList.contains('dark') || prefersDark;
+
+        if (initialIsDark && !root.classList.contains('dark')) {
+            root.classList.add('dark');
+        }
+
         setIsDark(initialIsDark);
         root.style.colorScheme = initialIsDark ? 'dark' : 'light';
     }, []);
@@ -41,13 +47,11 @@ export const useTheme = () => {
             root.style.colorScheme = newIsDark ? 'dark' : 'light';
         };
 
-        const startViewTransition = (
-            document as Document & {
-                startViewTransition?: (callback: () => void) => { ready: Promise<void> };
-            }
-        ).startViewTransition;
+        const doc = document as Document & {
+            startViewTransition?: (callback: () => void) => { ready: Promise<void> };
+        };
 
-        if (!startViewTransition) {
+        if (!doc.startViewTransition) {
             updateTheme();
             return;
         }
@@ -58,31 +62,22 @@ export const useTheme = () => {
             Math.max(y, window.innerHeight - y),
         );
 
-        const transition = startViewTransition(() => {
+        const transition = doc.startViewTransition(() => {
             updateTheme();
         });
 
         transition.ready.then(() => {
-            const clip = [
-                `circle(0px at ${x}px ${y}px)`,
-                `circle(${endRadius}px at ${x}px ${y}px)`,
-            ];
-
             root.animate(
-                { clipPath: clip },
                 {
-                    duration: 450,
-                    easing: 'ease-out',
+                    clipPath: [
+                        `circle(0px at ${x}px ${y}px)`,
+                        `circle(${endRadius}px at ${x}px ${y}px)`,
+                    ],
+                },
+                {
+                    duration: 500,
+                    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
                     pseudoElement: '::view-transition-new(root)',
-                } as KeyframeAnimationOptions & { pseudoElement: string },
-            );
-
-            root.animate(
-                { clipPath: [...clip].reverse() },
-                {
-                    duration: 450,
-                    easing: 'ease-out',
-                    pseudoElement: '::view-transition-old(root)',
                 } as KeyframeAnimationOptions & { pseudoElement: string },
             );
         });

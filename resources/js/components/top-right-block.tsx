@@ -80,10 +80,10 @@ export const TopRightBlock = ({ socialLinks, className }: TopRightBlockProps) =>
     return (
         <div className={className}>
             <div className="flex h-full w-full flex-col border-2 border-t-0 border-border bg-background">
-                <div className="flex items-start justify-end p-3">
+                <div className="flex items-start justify-end">
                     <button
                         type="button"
-                        className="rounded-sm text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        className="rounded-sm text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer p-3"
                         aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
                         onClick={(event) =>
                             toggleTheme({ x: event.clientX, y: event.clientY })

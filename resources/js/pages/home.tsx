@@ -13,18 +13,18 @@ const CELL_SIZE = 123;
 const FIRST_ROW_HEIGHT = Math.floor(CELL_SIZE / 2);
 
 const WORK_HISTORY = [
-    { name: "dunc'd on", role: 'dev', href: '#' },
-    { name: 'voyyance', role: 'cto', href: '#' },
-    { name: 'maiden voyage', role: 'dev', href: '#' },
-    { name: 'health catalyst', role: 'intern', href: '#' },
-    { name: 'familysearch', role: 'intern', href: '#' },
+    { name: "dunc'd on", role: 'dev', href: 'https://duncdon.supportingcast.fm/' },
+    { name: 'voyyance', role: 'cto', href: 'https://www.voyyance.com/' },
+    { name: 'maiden voyage', role: 'dev', href: 'https://yourmaidenvoyage.com/' },
+    { name: 'health catalyst', role: 'intern', href: 'https://www.healthcatalyst.com/' },
+    { name: 'familysearch', role: 'intern', href: 'https://www.familysearch.org/' },
 ];
 
 const SIDE_PROJECTS = [
-    { name: 'nba shot viz', href: '#' },
-    { name: 'la clippers', href: '#' },
-    { name: 'image gallery', href: '#' },
-    { name: 'golang api', href: '#' },
+    { name: 'nba shot viz', href: 'https://github.com/christensenjo/NBA-Shot-Data-Visualizer' },
+    { name: 'la clippers', href: 'https://github.com/christensenjo/la-clippers-data-visualization' },
+    { name: 'image gallery', href: 'https://github.com/christensenjo/t3gallery' },
+    { name: 'golang api', href: 'https://github.com/christensenjo/go-dinner-reservations' },
 ];
 
 const SOCIAL_LINKS = [
@@ -39,7 +39,7 @@ export default function Home() {
             <Head title="Joel Christensen" />
             <div className="relative min-h-dvh text-foreground">
                 <div className="absolute inset-0 -z-20 bg-background" />
-                <GridBackground rows={24} extendedRows={[1, 5]} cellSize={CELL_SIZE} firstRowHeight={FIRST_ROW_HEIGHT} />
+                <GridBackground rows={24} extendedRows={[1, 7, 8, 15, 16, 22]} cellSize={CELL_SIZE} firstRowHeight={FIRST_ROW_HEIGHT} />
 
                 <a
                     href="#main-content"

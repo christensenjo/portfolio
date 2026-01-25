@@ -52,7 +52,7 @@ export const WorkSection = ({
                         href="https://primestats.net"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-[calc(100%-2rem)] rounded-lg bg-muted shadow-lg h-fit cursor-pointer group"
+                        className="block w-[calc(100%-2rem)] bg-muted shadow-lg h-fit cursor-pointer group hover:shadow-xl"
                     >
                         <img
                             src="/images/primestats.png"
@@ -60,7 +60,7 @@ export const WorkSection = ({
                             width={688}
                             height={440}
                             loading="lazy"
-                            className="transition-transform duration-200 ease-out group-hover:scale-105"
+                            className="transition-transform duration-200 ease-in-out group-hover:scale-105 rounded-lg"
                         />
                     </a>
                 </div>

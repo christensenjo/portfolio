@@ -22,7 +22,7 @@ export const HeroSection = ({ cellSize = 123, className }: HeroSectionProps) => 
                 <h1 className="text-lg font-bold font-title leading-tight whitespace-nowrap text-balance">joel christensen</h1>
             </div>
 
-            <div className="col-start-2 col-span-2 row-start-1 row-span-2 flex flex-col justify-between border-t-2 border-r-2 border-b-2 border-border bg-background p-3 pl-6 pt-6 pb-4">
+            <div className="col-start-2 col-span-2 row-start-1 row-span-2 flex flex-col justify-between border-t-2 border-r-2 border-b-2 border-border bg-background p-3 pl-4 pt-6 pb-4">
                 <p className="text-pretty text-right text-base leading-snug">
                     hello, i'm joel christensen,
                     <br />
@@ -40,10 +40,6 @@ export const HeroSection = ({ cellSize = 123, className }: HeroSectionProps) => 
             <div
                 className="pointer-events-none absolute z-10 bg-border"
                 style={{ left: `${cellSize - 2}px`, top: 0, width: '2px', height: '2px' }}
-            />
-            <div
-                className="pointer-events-none absolute z-10 bg-border"
-                style={{ left: `${cellSize - 2}px`, top: `${cellSize - 2}px`, width: '2px', height: '2px' }}
             />
         </div>
     );
