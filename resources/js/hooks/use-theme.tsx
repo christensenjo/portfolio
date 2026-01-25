@@ -26,14 +26,19 @@ export const useTheme = () => {
     }, []);
 
     useEffect(() => {
-        setIsDark(document.documentElement.classList.contains('dark'));
+        const root = document.documentElement;
+        const initialIsDark = root.classList.contains('dark');
+        setIsDark(initialIsDark);
+        root.style.colorScheme = initialIsDark ? 'dark' : 'light';
     }, []);
 
     const toggleTheme = useCallback((origin?: { x: number; y: number }) => {
         const root = document.documentElement;
         const updateTheme = () => {
             root.classList.toggle('dark');
-            setIsDark(root.classList.contains('dark'));
+            const newIsDark = root.classList.contains('dark');
+            setIsDark(newIsDark);
+            root.style.colorScheme = newIsDark ? 'dark' : 'light';
         };
 
         const startViewTransition = (

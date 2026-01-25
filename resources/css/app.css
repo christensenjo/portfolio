@@ -78,6 +78,7 @@
 }
 
 :root {
+    color-scheme: light;
     --base: #f1f9fe;
     --dark: #111212;
     --base-muted-hex: #c4cbcf;
@@ -145,6 +146,7 @@
 }
 
 .dark {
+    color-scheme: dark;
     --background: var(--dark);
     --foreground: var(--base);
     --card: var(--dark);
@@ -209,5 +211,9 @@
 @layer utilities {
     .font-title {
         letter-spacing: -0.1em;
+    }
+
+    .scroll-mt-16 {
+        scroll-margin-top: 4rem;
     }
 }
