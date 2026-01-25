@@ -48,8 +48,8 @@ export default function Home() {
                     Skip to main content
                 </a>
 
-                <main id="main-content" className="relative z-10 px-1">
-                    <div className="mx-auto" style={{ width: `${CELL_SIZE * 3}px` }}>
+                <main id="main-content" className="relative z-10">
+                    <div className="mx-auto px-1" style={{ width: `${CELL_SIZE * 3}px` }}>
                         {/* Header grid area */}
                         <div
                             className="grid grid-cols-3"
@@ -87,12 +87,10 @@ export default function Home() {
                         <section id="moreaboutme" className="scroll-mt-16" aria-label="More about me">
                             <AboutSection cellSize={CELL_SIZE} />
                         </section>
-
-                        {/* Footer */}
-                        <div className="mt-8">
-                            <FooterSection cellSize={CELL_SIZE} socialLinks={SOCIAL_LINKS} />
-                        </div>
                     </div>
+
+                    {/* Footer - full width background */}
+                    <FooterSection cellSize={CELL_SIZE} socialLinks={SOCIAL_LINKS} />
                 </main>
             </div>
         </>

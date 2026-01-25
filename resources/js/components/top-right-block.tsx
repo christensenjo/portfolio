@@ -63,7 +63,7 @@ const GitHubIcon = ({ className = 'size-5' }: IconProps) => (
     </svg>
 );
 
-    const LinkedInIcon = ({ className = 'size-5' }: IconProps) => (
+const LinkedInIcon = ({ className = 'size-5' }: IconProps) => (
     <svg
         viewBox="0 0 24 24"
         className={className}
@@ -93,7 +93,7 @@ export const TopRightBlock = ({ socialLinks, className }: TopRightBlockProps) =>
                     </button>
                 </div>
 
-                <nav className="flex grow items-center px-3 pb-4 mt-8" aria-label="Social links">
+                <nav className="flex grow items-center px-3 pb-4 mt-7" aria-label="Social links">
                     <ul className="grid w-full gap-2 text-sm">
                         {socialLinks.map((link) => (
                             <li key={link.href}>
