@@ -1,4 +1,3 @@
-import { Link } from '@inertiajs/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -21,6 +20,17 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
     const closeMenu = useCallback(() => {
         setOpen(false);
         buttonRef.current?.focus();
+    }, []);
+
+    const scrollToSection = useCallback((href: string) => {
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        setOpen(false);
     }, []);
 
     useEffect(() => {
@@ -49,7 +59,7 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
             <button
                 ref={buttonRef}
                 type="button"
-                className="flex h-full w-full items-center justify-start pl-4 border-2 border-t-0 border-border bg-background text-lg transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="flex h-full w-full items-center justify-start pl-4 border-2 border-t-0 border-border bg-background text-lg transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
                 aria-haspopup="menu"
@@ -66,15 +76,15 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
                 >
                     <div className="grid gap-2">
                         {links.map((link) => (
-                            <Link
+                            <button
                                 key={link.href}
-                                href={link.href}
-                                className="rounded-sm text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                type="button"
+                                className="rounded-sm text-left text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer"
                                 role="menuitem"
-                                onClick={() => setOpen(false)}
+                                onClick={() => scrollToSection(link.href)}
                             >
                                 {link.label}
-                            </Link>
+                            </button>
                         ))}
                     </div>
                 </nav>
