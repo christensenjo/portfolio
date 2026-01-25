@@ -2,6 +2,7 @@ import { Head } from '@inertiajs/react';
 
 import { GridBackground } from '@/components/grid-background';
 import { HeroSection } from '@/components/hero-section';
+import { HeroVisual } from '@/components/hero-visual';
 import { NavTrigger } from '@/components/nav-trigger';
 import { TopRightBlock } from '@/components/top-right-block';
 
@@ -53,7 +54,15 @@ export default function Home() {
                             ]}
                         />
 
-                        <HeroSection className="col-start-1 row-start-4 row-span-2 col-span-3" />
+                        <HeroSection
+                            cellSize={CELL_SIZE}
+                            className="col-start-1 row-start-4 row-span-2 col-span-3"
+                        />
+
+                        <HeroVisual
+                            cellSize={CELL_SIZE}
+                            className="col-start-1 row-start-6 row-span-2 col-span-3"
+                        />
                     </div>
 
                     <section id="work" className="scroll-mt-16" aria-label="Work">

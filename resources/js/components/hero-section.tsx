@@ -11,46 +11,8 @@ export const HeroSection = ({ cellSize = 123, className }: HeroSectionProps) => 
             className={cn('relative grid grid-cols-3 grid-rows-2', className)}
             style={{ gridAutoRows: `${cellSize}px` }}
         >
-            {/* L-shaped border background */}
-            <div className="pointer-events-none absolute inset-0">
-                {/* Top row - 3 cells with specific borders */}
-                <div className="absolute flex left-0 top-0 w-full" style={{ height: `${cellSize}px` }}>
-                    {/* Top-left cell: full L corner */}
-                    <div
-                        className="border-2 border-r-0 border-border bg-background"
-                        style={{ width: `${cellSize}px`, height: '100%' }}
-                    />
-                    {/* Top-middle cell: top border only */}
-                    <div
-                        className="border-t-2 border-border bg-background"
-                        style={{ width: `${cellSize}px`, height: '100%' }}
-                    />
-                    {/* Top-right cell: top and right borders */}
-                    <div
-                        className="border-t-2 border-r-2 border-border bg-background"
-                        style={{ width: `${cellSize}px`, height: '100%' }}
-                    />
-                </div>
-                {/* Bottom row - 2 cells on the right */}
-                <div
-                    className="absolute flex"
-                    style={{ left: `${cellSize}px`, top: `${cellSize - 2}px`, width: `${cellSize * 2}px`, height: `${cellSize + 2}px` }}
-                >
-                    {/* Bottom-middle cell: left and bottom borders */}
-                    <div
-                        className="border-l-2 border-b-2 border-border bg-background"
-                        style={{ width: `${cellSize}px`, height: '100%' }}
-                    />
-                    {/* Bottom-right cell: right and bottom borders */}
-                    <div
-                        className="border-r-2 border-b-2 border-border bg-background"
-                        style={{ width: `${cellSize}px`, height: '100%' }}
-                    />
-                </div>
-            </div>
-
-            {/* Content */}
-            <div className="relative col-span-1 row-start-1 flex h-full flex-col items-center justify-between p-3 pb-2">
+            {/* Row 1, Col 1: Profile cell - top, left, bottom borders */}
+            <div className="col-start-1 row-start-1 flex flex-col items-center justify-between border-t-2 border-l-2 border-b-2 border-border bg-background p-3 pb-2">
                 <img
                     src="/images/profile.jpg"
                     alt="joel christensen"
@@ -61,20 +23,41 @@ export const HeroSection = ({ cellSize = 123, className }: HeroSectionProps) => 
                 <h1 className="text-lg font-bold font-title leading-tight whitespace-nowrap">joel christensen</h1>
             </div>
 
-            <div className="relative col-start-2 col-span-2 row-start-1 flex items-start p-3 pl-6 pt-8">
+            {/* Row 1-2, Col 2-3: Content area spanning both rows - top, right, bottom borders (no left - shares edge with profile) */}
+            <div className="col-start-2 col-span-2 row-start-1 row-span-2 flex flex-col justify-between border-t-2 border-r-2 border-b-2 border-border bg-background p-3 pl-6 pt-6 pb-4">
                 <p className="text-pretty text-right text-base leading-snug">
                     hello, i'm joel christensen,
                     <br />
                     a software engineer. i love to build experiences for the web and
                     work with data, especially around subjects i'm passionate about.
                 </p>
-            </div>
-
-            <div className="relative col-start-2 col-span-2 row-start-2 flex items-end p-3 pl-6 pb-2">
                 <p className="text-pretty text-right text-base">
                     currently working at <span className="font-title font-bold">dunc'd on</span>
                 </p>
             </div>
+
+            {/* Row 2, Col 1: Missing cell - left border and background to cover gridlines */}
+            <div className="col-start-1 row-start-2 border-r-2 border-border" />
+
+            {/* Corner fills where profile cell meets content area */}
+            <div
+                className="pointer-events-none absolute z-10 bg-border"
+                style={{
+                    left: `${cellSize - 2}px`,
+                    top: 0,
+                    width: '2px',
+                    height: '2px',
+                }}
+            />
+            <div
+                className="pointer-events-none absolute z-10 bg-border"
+                style={{
+                    left: `${cellSize - 2}px`,
+                    top: `${cellSize - 2}px`,
+                    width: '2px',
+                    height: '2px',
+                }}
+            />
         </div>
     );
 };
