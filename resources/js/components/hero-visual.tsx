@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/hooks/use-theme';
-import { Dither, Shader, SimplexNoise, SolidColor } from 'shaders/react';
+import { CursorTrail, Dither, Shader, SimplexNoise, SolidColor } from 'shaders/react';
 
 type HeroVisualProps = {
     cellSize?: number;
@@ -37,27 +37,37 @@ export const HeroVisual = ({ cellSize = 123, className }: HeroVisualProps) => {
                 }}
             >
                 <Shader className="size-full">
-                    <SolidColor color="#f1f9fe" />
+                    <SolidColor
+                        color="#f1f9fe" />
                     <Dither
                         blendMode="multiply"
                         colorA={primaryHex}
                         colorB="#ffffff00"
                         pixelSize={4}
-                        threshold={0}
-                    >
+                        threshold={0}>
+                        <CursorTrail
+                            colorA="#00aaff"
+                            colorB="#ff00aa"
+                            colorSpace="linear"
+                            length={0.5}
+                            radius={0.5}
+                            shrink={1} 
+                        />
                         <SimplexNoise
-                            balance={0}
+                            balance={0.6}
                             colorA="#ffffff"
                             colorB="transparent"
                             contrast={0}
-                            scale={0.5}
+                            scale={-0.2}
                             seed={90}
                             speed={0.2}
-                            visible={true}
+                            visible={true} 
                         />
                     </Dither>
                 </Shader>
             </div>
+
+
 
             {/* Grid cells for borders (z-10 to appear on top of shader) */}
             {/* Row 1, Col 1: Top-left cell - top, left, right borders (no bottom - connects to cell below) */}
