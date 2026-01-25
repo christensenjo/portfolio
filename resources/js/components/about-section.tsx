@@ -5,11 +5,6 @@ type AboutSectionProps = {
     className?: string;
 };
 
-{/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-<path d="M23.25 9.00501L12 14.26L0.75 9.00501L12 3.75L23.25 9.00501ZM23.25 9.00501V15.261M4.75002 10.9756V15.4507C4.75002 16.1906 5.15773 16.8702 5.81023 17.2178L11.0602 20.0152C11.6477 20.3283 12.3523 20.3283 12.9398 20.0152L18.1898 17.2178C18.8423 16.8702 19.25 16.1906 19.25 15.4507V10.9756" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> */}
-
-
 const EducationIcon = ({ className = 'size-5' }: { className?: string }) => (
     <svg 
         xmlns="http://www.w3.org/2000/svg" 
@@ -50,28 +45,20 @@ const PassionsIcon = ({ className = 'size-5' }: { className?: string }) => (
 export const AboutSection = ({ cellSize = 123, className }: AboutSectionProps) => {
     return (
         <div className={cn('relative', className)}>
-            {/* Header: { more about me } - spans full width */}
             <div className="border-2 border-border bg-background px-3 flex flex-col justify-center" style={{ height: `${Math.floor(cellSize * 0.5)}px`, marginBottom: `${cellSize / 2}px` }}>
-                <h2 className="font-title text-xl font-bold">{'{ more about me }'}</h2>
+                <h2 className="font-title text-xl font-bold text-balance">{'{ more about me }'}</h2>
             </div>
 
-            {/* Education block - right side, partial height */}
             <div className="grid grid-cols-3" style={{ gridTemplateRows: `${Math.floor(cellSize * 0.67)}px`, marginBottom: `${cellSize * 0.33}px` }}>
-                {/* Empty left cell */}
                 <div className="col-start-1" />
-
-                {/* Education cells - 2 cols */}
                 <div className="col-span-2 grid grid-cols-2">
                     <div className="relative border-2 border-r-0 border-border bg-background">
-                        {/* Graduation cap icon placeholder */}
                         <span className="absolute top-1.5 left-2 flex size-6 items-center justify-center text-primary">
                             <EducationIcon />
                         </span>
                     </div>
                     <div className="border-2 border-border border-l-0 bg-background" />
                 </div>
-
-                {/* Education content overlay */}
                 <div
                     className="absolute right-3 text-right text-base leading-snug pt-2"
                     style={{ top: `${Math.floor(cellSize)}px`, width: `${cellSize * 2 - 24}px` }}
@@ -82,50 +69,33 @@ export const AboutSection = ({ cellSize = 123, className }: AboutSectionProps) =
                 </div>
             </div>
 
-            {/* Accomplishments block - left side */}
             <div className="grid grid-cols-3" style={{ gridTemplateRows: `${cellSize}px`, marginBottom: `${cellSize * 0.5}px` }}>
-                {/* Accomplishments cells - 2 cols on left */}
                 <div className="relative col-span-2 grid grid-cols-2">
                     <div className="border-2 border-r-0 border-border bg-background" />
                     <div className="relative border-2 border-l-0 border-border bg-background">
-                        {/* Glasses icon placeholder */}
                         <span className="absolute right-2 bottom-2 flex size-6 items-center justify-center text-primary">
                             <AccomplishmentsIcon />
                         </span>
                     </div>
-
-                    {/* Accomplishments content */}
                     <div className="absolute inset-0 p-3 text-base leading-snug">
                         <p className="mb-2">member of first high-school age google developer group</p>
                         <p>data science club leadership at usu</p>
                     </div>
                 </div>
-
-                {/* Empty right cell */}
                 <div className="col-start-3" />
             </div>
 
-            {/* Passions block - right side, 2 rows */}
             <div className="grid grid-cols-3" style={{ gridTemplateRows: `repeat(2, ${cellSize * 0.75}px)` }}>
-                {/* Empty left column for both rows */}
                 <div className="col-start-1 row-span-2" />
-
-                {/* Passions cells - 2 cols, 2 rows */}
                 <div className="relative col-span-2 row-span-2 grid grid-cols-2 grid-rows-2">
-                    {/* Top row */}
                     <div className="relative border-2 border-r-0 border-b-0 border-border bg-background">
-                        {/* Heart icon placeholder */}
                         <span className="absolute top-2 left-2 flex size-6 items-center justify-center text-primary">
                             <PassionsIcon />
                         </span>
                     </div>
                     <div className="border-2 border-b-0 border-l-0 border-border bg-background" />
-
-                    {/* Bottom row */}
                     <div className="border-2 border-r-0 border-t-0 border-border bg-background" />
                     <div className="border-2 border-t-0 border-l-0 border-border bg-background" />
-
-                    {/* Passions content */}
                     <div className="absolute inset-0 flex flex-col justify-center p-3 text-right text-base leading-relaxed space-y-1">
                         <p className="mb-1">also passionate about:</p>
                         <p className="mt-2">my family</p>

@@ -50,12 +50,9 @@ export default function Home() {
 
                 <main id="main-content" className="relative z-10">
                     <div className="mx-auto px-1" style={{ width: `${CELL_SIZE * 3}px` }}>
-                        {/* Header grid area */}
                         <div
                             className="grid grid-cols-3"
-                            style={{
-                                gridTemplateRows: `${FIRST_ROW_HEIGHT}px repeat(6, ${CELL_SIZE}px)`,
-                            }}
+                            style={{ gridTemplateRows: `${FIRST_ROW_HEIGHT}px repeat(6, ${CELL_SIZE}px)` }}
                         >
                             <NavTrigger
                                 className="col-start-1 row-start-1"
@@ -64,32 +61,24 @@ export default function Home() {
                                     { href: '#moreaboutme', label: '{more about me}' },
                                 ]}
                             />
-
                             <TopRightBlock className="col-start-3 row-span-2 row-start-1" socialLinks={SOCIAL_LINKS} />
-
                             <HeroSection cellSize={CELL_SIZE} className="col-span-3 col-start-1 row-span-2 row-start-4" />
-
                             <HeroVisual cellSize={CELL_SIZE} className="col-span-3 col-start-1 row-span-2 row-start-6" />
                         </div>
 
-                        {/* Spacing row */}
                         <div style={{ height: `${CELL_SIZE}px` }} />
 
-                        {/* Work Section */}
                         <section id="work" className="scroll-mt-16" aria-label="Work">
                             <WorkSection cellSize={CELL_SIZE} workHistory={WORK_HISTORY} sideProjects={SIDE_PROJECTS} />
                         </section>
 
-                        {/* Spacing row */}
                         <div style={{ height: `${CELL_SIZE}px` }} />
 
-                        {/* More About Me Section */}
                         <section id="moreaboutme" className="scroll-mt-16" aria-label="More about me">
                             <AboutSection cellSize={CELL_SIZE} />
                         </section>
                     </div>
 
-                    {/* Footer - full width background */}
                     <FooterSection cellSize={CELL_SIZE} socialLinks={SOCIAL_LINKS} />
                 </main>
             </div>
