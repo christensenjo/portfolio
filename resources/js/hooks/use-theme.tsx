@@ -1,8 +1,14 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 type PrimaryOption = {
     name: 'vue' | 'laravel' | 'tailwind';
     value: string;
+};
+
+type ThemeContextValue = {
+    isDark: boolean;
+    primary: PrimaryOption;
+    toggleTheme: (origin?: { x: number; y: number }) => void;
 };
 
 const primaryOptions: PrimaryOption[] = [
@@ -15,7 +21,9 @@ const getRandomPrimary = (): PrimaryOption => {
     return primaryOptions[Math.floor(Math.random() * primaryOptions.length)];
 };
 
-export const useTheme = () => {
+const ThemeContext = createContext<ThemeContextValue | null>(null);
+
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [primary, setPrimary] = useState<PrimaryOption>(primaryOptions[0]);
     const [isDark, setIsDark] = useState(false);
 
@@ -83,7 +91,7 @@ export const useTheme = () => {
         });
     }, []);
 
-    return useMemo(
+    const value = useMemo(
         () => ({
             isDark,
             primary,
@@ -91,4 +99,16 @@ export const useTheme = () => {
         }),
         [isDark, primary, toggleTheme],
     );
+
+    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+};
+
+export const useTheme = (): ThemeContextValue => {
+    const context = useContext(ThemeContext);
+
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+
+    return context;
 };
