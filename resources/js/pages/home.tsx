@@ -41,7 +41,7 @@ export default function Home() {
         <>
             <Seo
                 title=""
-                description="Joel Christensen is a full-stack developer specializing in Laravel, React, and modern web technologies. Building scalable, beautiful web applications."
+                description="Joel Christensen is a full-stack developer specializing in Laravel, Typescript, and modern web technologies. Building scalable, beautiful web applications."
                 image={`${appUrl}/images/og-image.jpg`}
                 imageAlt="Joel Christensen - Full-Stack Developer"
                 type="website"

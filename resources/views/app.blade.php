@@ -7,7 +7,7 @@
         <title inertia>{{ config('app.name', 'Joel Christensen') }}</title>
 
         {{-- Default meta description (can be overridden by Inertia Head) --}}
-        <meta head-key="description" name="description" content="Joel Christensen - Full-stack developer specializing in Laravel, React, and modern web technologies.">
+        <meta head-key="description" name="description" content="Joel Christensen - Full-stack developer specializing in Laravel, Typescript, and modern web technologies.">
 
         {{-- Canonical URL --}}
         <link rel="canonical" href="{{ url()->current() }}">
@@ -16,7 +16,7 @@
         <meta head-key="og:type" property="og:type" content="website">
         <meta head-key="og:site_name" property="og:site_name" content="{{ config('app.name', 'Joel Christensen') }}">
         <meta head-key="og:title" property="og:title" content="{{ config('app.name', 'Joel Christensen') }}">
-        <meta head-key="og:description" property="og:description" content="Full-stack developer specializing in Laravel, React, and modern web technologies.">
+        <meta head-key="og:description" property="og:description" content="Full-stack developer specializing in Laravel, Typescript, and modern web technologies.">
         <meta head-key="og:url" property="og:url" content="{{ url()->current() }}">
         <meta head-key="og:image" property="og:image" content="{{ config('app.url') }}/images/og-image.jpg">
         <meta head-key="og:image:width" property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
         <meta head-key="twitter:site" name="twitter:site" content="@dataSaysJoel">
         <meta head-key="twitter:creator" name="twitter:creator" content="@dataSaysJoel">
         <meta head-key="twitter:title" name="twitter:title" content="{{ config('app.name', 'Joel Christensen') }}">
-        <meta head-key="twitter:description" name="twitter:description" content="Full-stack developer specializing in Laravel, React, and modern web technologies.">
+        <meta head-key="twitter:description" name="twitter:description" content="Full-stack developer specializing in Laravel, Typescript, and modern web technologies.">
         <meta head-key="twitter:image" name="twitter:image" content="{{ config('app.url') }}/images/og-image.jpg">
         <meta head-key="twitter:image:alt" name="twitter:image:alt" content="Joel Christensen - Full-stack Developer">
 
