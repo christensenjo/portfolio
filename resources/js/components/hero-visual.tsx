@@ -23,6 +23,7 @@ export const HeroVisual = ({ cellSize = 123, className }: HeroVisualProps) => {
             style={{ gridAutoRows: `${cellSize}px` }}
         >
             <div
+                key={primary.name}
                 className="pointer-events-none absolute inset-0"
                 style={{
                     clipPath: `polygon(
