@@ -1,4 +1,4 @@
-import { Head } from '@inertiajs/react';
+import { usePage } from '@inertiajs/react';
 
 import { AboutSection } from '@/components/about-section';
 import { FooterSection } from '@/components/footer-section';
@@ -6,6 +6,7 @@ import { GridBackground } from '@/components/grid-background';
 import { HeroSection } from '@/components/hero-section';
 import { HeroVisual } from '@/components/hero-visual';
 import { NavTrigger } from '@/components/nav-trigger';
+import { Seo } from '@/components/seo';
 import { TopRightBlock } from '@/components/top-right-block';
 import { WorkSection } from '@/components/work-section';
 
@@ -34,9 +35,17 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Home() {
+    const { appUrl } = usePage<{ appUrl: string }>().props;
+
     return (
         <>
-            <Head title="Joel Christensen" />
+            <Seo
+                title=""
+                description="Joel Christensen is a full-stack developer specializing in Laravel, React, and modern web technologies. Building scalable, beautiful web applications."
+                image={`${appUrl}/images/og-image.jpg`}
+                imageAlt="Joel Christensen - Full-Stack Developer"
+                type="website"
+            />
             <div className="relative min-h-dvh text-foreground">
                 <div className="absolute inset-0 -z-20 bg-background" />
                 <GridBackground rows={24} extendedRows={[1, 7, 8, 15, 16, 22]} cellSize={CELL_SIZE} firstRowHeight={FIRST_ROW_HEIGHT} />
