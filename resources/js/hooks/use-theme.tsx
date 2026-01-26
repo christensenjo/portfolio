@@ -44,6 +44,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
         setIsDark(initialIsDark);
         root.style.colorScheme = initialIsDark ? 'dark' : 'light';
+
+        const themeColorMeta = document.getElementById('theme-color-meta') as HTMLMetaElement | null;
+        if (themeColorMeta) {
+            themeColorMeta.content = initialIsDark ? '#111212' : '#f1f9fe';
+        }
     }, []);
 
     const toggleTheme = useCallback((origin?: { x: number; y: number }) => {
@@ -53,6 +58,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
             const newIsDark = root.classList.contains('dark');
             setIsDark(newIsDark);
             root.style.colorScheme = newIsDark ? 'dark' : 'light';
+
+            const themeColorMeta = document.getElementById('theme-color-meta') as HTMLMetaElement | null;
+            if (themeColorMeta) {
+                themeColorMeta.content = newIsDark ? '#111212' : '#f1f9fe';
+            }
         };
 
         const doc = document as Document & {
