@@ -1,22 +1,29 @@
 import '../css/app.css';
 
-import { createInertiaApp } from '@inertiajs/react';
+import { ThemeProvider } from '@/hooks/use-theme';
+import { createInertiaApp, type ResolvedComponent } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from '@/hooks/use-theme';
 
 const appName = import.meta.env.VITE_APP_NAME || 'joel christensen';
 
 createInertiaApp({
     title: (title) => (title ? `${title} | ${appName}` : appName),
-    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
+    resolve: async (name) => {
+        const page = await resolvePageComponent<{ default: ResolvedComponent }>(
+            `./pages/${name}.tsx`,
+            import.meta.glob<{ default: ResolvedComponent }>('./pages/**/*.tsx'),
+        );
+
+        return page.default;
+    },
     setup({ el, App, props }) {
         const root = createRoot(el);
 
         root.render(
             <ThemeProvider>
                 <App {...props} />
-            </ThemeProvider>
+            </ThemeProvider>,
         );
     },
     progress: {

@@ -36,12 +36,15 @@ export const WorkSection = ({
     return (
         <div className={cn('relative', className)}>
             <div className="border-2 border-border bg-background" style={{ height: `${cellSize / 2}px`, marginBottom: `${cellSize / 2}px` }}>
-                <div className="px-3 flex flex-col justify-center h-full">
+                <div className="flex h-full flex-col justify-center px-3">
                     <h2 className="font-title text-xl font-bold text-balance">{'{ work }'}</h2>
                 </div>
             </div>
 
-            <div className="relative border-2 border-border bg-background" style={{ height: `${cellSize * 2.5}px`, marginBottom: `${cellSize / 2}px` }}>
+            <div
+                className="relative border-2 border-border bg-background"
+                style={{ height: `${cellSize * 2.5}px`, marginBottom: `${cellSize / 2}px` }}
+            >
                 <span className="font-title absolute top-2 right-3 text-base font-bold">showcase</span>
                 <div className="flex h-full flex-col items-center justify-center gap-4">
                     <p className="text-center text-sm">
@@ -52,7 +55,7 @@ export const WorkSection = ({
                         href="https://primestats.net"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-[calc(100%-2rem)] bg-muted shadow-lg h-fit cursor-pointer group hover:shadow-xl"
+                        className="group block h-fit w-[calc(100%-2rem)] cursor-pointer bg-muted shadow-lg hover:shadow-xl"
                     >
                         <img
                             src="/images/primestats.png"
@@ -60,7 +63,7 @@ export const WorkSection = ({
                             width={688}
                             height={440}
                             loading="lazy"
-                            className="transition-transform duration-200 ease-in-out group-hover:scale-105 rounded-lg"
+                            className="rounded-lg transition-transform duration-200 ease-in-out group-hover:scale-105"
                         />
                     </a>
                 </div>
@@ -68,8 +71,8 @@ export const WorkSection = ({
 
             <div className="relative grid grid-cols-3" style={{ gridTemplateRows: `repeat(3, ${cellSize}px)` }}>
                 <div className="col-start-1 row-start-1 border-2 border-r-0 border-b-0 border-border bg-background" />
-                <div className="col-start-2 row-start-1 border-2 border-l-0 border-b-0 border-border bg-background" />
-                <div className="col-start-1 row-start-2 border-2 border-r-0 border-t-0 bg-background" />
+                <div className="col-start-2 row-start-1 border-2 border-b-0 border-l-0 border-border bg-background" />
+                <div className="col-start-1 row-start-2 border-2 border-t-0 border-r-0 bg-background" />
                 <div className="col-start-2 row-start-2 border-0 border-r-2 bg-background" />
                 <div className="col-start-3 row-start-2 border-0" />
                 <div className="col-start-2 row-start-3 border-2 border-t-0 border-r-0 border-border bg-background" />
@@ -110,7 +113,7 @@ export const WorkSection = ({
                                 href={project.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-fit text-base transition-colors hover:text-primary whitespace-nowrap max-w-26"
+                                className="w-fit max-w-26 text-base whitespace-nowrap transition-colors hover:text-primary"
                             >
                                 /<span className="font-bold">{project.name}</span>
                             </a>

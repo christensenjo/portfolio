@@ -59,10 +59,7 @@ export default function Home() {
 
                 <main id="main-content" className="relative z-10">
                     <div className="mx-auto px-1" style={{ width: `${CELL_SIZE * 3}px` }}>
-                        <div
-                            className="grid grid-cols-3"
-                            style={{ gridTemplateRows: `${FIRST_ROW_HEIGHT}px repeat(6, ${CELL_SIZE}px)` }}
-                        >
+                        <div className="grid grid-cols-3" style={{ gridTemplateRows: `${FIRST_ROW_HEIGHT}px repeat(6, ${CELL_SIZE}px)` }}>
                             <NavTrigger
                                 className="col-start-1 row-start-1"
                                 links={[

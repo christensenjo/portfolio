@@ -7,19 +7,11 @@ type GridBackgroundProps = {
     firstRowHeight?: number;
 };
 
-export const GridBackground = ({
-    rows = 18,
-    extendedRows = [],
-    cellSize = 123,
-    firstRowHeight,
-}: GridBackgroundProps) => {
+export const GridBackground = ({ rows = 18, extendedRows = [], cellSize = 123, firstRowHeight }: GridBackgroundProps) => {
     const gridWidth = cellSize * 3;
     const actualFirstRowHeight = firstRowHeight ?? cellSize;
 
-    const cells = useMemo(
-        () => Array.from({ length: rows * 3 }, (_, index) => index),
-        [rows],
-    );
+    const cells = useMemo(() => Array.from({ length: rows * 3 }, (_, index) => index), [rows]);
 
     const gridTemplateRows = useMemo(() => {
         const rowHeights = [`${actualFirstRowHeight}px`];
@@ -46,17 +38,14 @@ export const GridBackground = ({
                     }}
                 >
                     {cells.map((cell) => (
-                        <div
-                            key={cell}
-                            className="border border-dashed border-[color:var(--gridline-color)]"
-                        />
+                        <div key={cell} className="border border-dashed border-[color:var(--gridline-color)]" />
                     ))}
                 </div>
 
                 {extendedRows.map((row) => (
                     <div
                         key={`row-${row}`}
-                        className="absolute left-0 right-0 border-t border-dashed border-[color:var(--gridline-color)]"
+                        className="absolute right-0 left-0 border-t border-dashed border-[color:var(--gridline-color)]"
                         style={{ top: `${getRowTop(row)}px` }}
                     />
                 ))}

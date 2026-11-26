@@ -38,35 +38,23 @@ export function Seo({
 }: SeoProps) {
     return (
         <Head title={title}>
-            {description && (
-                <meta head-key="description" name="description" content={description} />
-            )}
+            {description && <meta head-key="description" name="description" content={description} />}
 
             {noindex && <meta head-key="robots" name="robots" content="noindex,nofollow" />}
 
             {/* Open Graph */}
             {type && <meta head-key="og:type" property="og:type" content={type} />}
             {title && <meta head-key="og:title" property="og:title" content={title} />}
-            {description && (
-                <meta head-key="og:description" property="og:description" content={description} />
-            )}
+            {description && <meta head-key="og:description" property="og:description" content={description} />}
             {image && <meta head-key="og:image" property="og:image" content={image} />}
-            {imageAlt && (
-                <meta head-key="og:image:alt" property="og:image:alt" content={imageAlt} />
-            )}
+            {imageAlt && <meta head-key="og:image:alt" property="og:image:alt" content={imageAlt} />}
 
             {/* Twitter Card */}
-            {twitterCard && (
-                <meta head-key="twitter:card" name="twitter:card" content={twitterCard} />
-            )}
+            {twitterCard && <meta head-key="twitter:card" name="twitter:card" content={twitterCard} />}
             {title && <meta head-key="twitter:title" name="twitter:title" content={title} />}
-            {description && (
-                <meta head-key="twitter:description" name="twitter:description" content={description} />
-            )}
+            {description && <meta head-key="twitter:description" name="twitter:description" content={description} />}
             {image && <meta head-key="twitter:image" name="twitter:image" content={image} />}
-            {imageAlt && (
-                <meta head-key="twitter:image:alt" name="twitter:image:alt" content={imageAlt} />
-            )}
+            {imageAlt && <meta head-key="twitter:image:alt" name="twitter:image:alt" content={imageAlt} />}
 
             {children}
         </Head>
