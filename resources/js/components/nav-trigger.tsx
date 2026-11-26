@@ -59,7 +59,7 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
             <button
                 ref={buttonRef}
                 type="button"
-                className="flex h-full w-full items-center justify-start pl-4 border-2 border-t-0 border-border bg-background text-lg transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer"
+                className="flex h-full w-full cursor-pointer items-center justify-start border-2 border-t-0 border-border bg-background pl-4 text-lg transition-colors hover:bg-foreground hover:text-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
                 aria-haspopup="menu"
@@ -70,7 +70,7 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
 
             {open ? (
                 <nav
-                    className="absolute left-0 top-full z-20 mt-2 w-48 border-2 border-border bg-background p-3 text-sm"
+                    className="absolute top-full left-0 z-20 mt-2 w-48 border-2 border-border bg-background p-3 text-sm"
                     role="menu"
                     aria-label="Navigation"
                 >
@@ -79,7 +79,7 @@ export const NavTrigger = ({ links, className }: NavTriggerProps) => {
                             <button
                                 key={link.href}
                                 type="button"
-                                className="rounded-sm text-left text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer"
+                                className="cursor-pointer rounded-sm text-left text-foreground transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                                 role="menuitem"
                                 onClick={() => scrollToSection(link.href)}
                             >

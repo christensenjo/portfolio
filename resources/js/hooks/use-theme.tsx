@@ -75,10 +75,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         }
 
         const { x, y } = origin ?? { x: window.innerWidth - 32, y: 32 };
-        const endRadius = Math.hypot(
-            Math.max(x, window.innerWidth - x),
-            Math.max(y, window.innerHeight - y),
-        );
+        const endRadius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
 
         const transition = doc.startViewTransition(() => {
             updateTheme();
@@ -87,10 +84,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         transition.ready.then(() => {
             root.animate(
                 {
-                    clipPath: [
-                        `circle(0px at ${x}px ${y}px)`,
-                        `circle(${endRadius}px at ${x}px ${y}px)`,
-                    ],
+                    clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`],
                 },
                 {
                     duration: 500,
